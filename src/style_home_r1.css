@@ -1,0 +1,85 @@
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.title-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: lightgrey;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.title {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.menu-bar {
+  background-color: lightgrey;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.menu-bar-left {
+  display: flex;
+  align-items: flex-end;
+  white-space: nowrap;
+}
+
+.menu-bar-right {
+  display: flex;
+  align-items: stretch;
+}
+
+.menu-bar-right button {
+  flex: 1;
+  white-space: nowrap;
+  height: 30px; /* Adjust the height as needed */
+}
+
+.menu-bar a {
+  color: black;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+/* Add additional CSS for adjusting scroll position */
+[id]:target::before {
+  content: "";
+  display: block;
+  height: 120px; /* Adjust this value based on your title bar height */
+  margin: -120px 0 0; /* Adjust this value based on your title bar height */
+}
+
+/* Add padding to the top of the content area */
+.content {
+  padding-top: 140px; /* Adjust this value based on your title bar height and desired spacing */
+}
+
+/* Create a two-column layout */
+.about-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.about-photo {
+  flex: 0 0 200px; /* Adjust the width of the photo column as needed */
+  padding-right: 20px; /* Adjust the spacing between the photo and text as needed */
+}
+
+.about-text {
+  flex: 1;
+  text-align: justify;
+  align-self: flex-start;
+}
+</style>
